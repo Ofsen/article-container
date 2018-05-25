@@ -1,0 +1,117 @@
+* { margin: 0;padding: 0; font-family: 'Roboto', sans-serif;}
+
+#cont {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.blog {
+	height: 17em;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-150%) translateY(-50%);
+	width: 25em;
+	display: inline-block;
+	overflow: hidden;
+	background: #212121;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.35);
+	position: relative;
+}
+
+.blog::before {
+	position: absolute;
+	z-index: 1;
+	content: " ";
+	background: rgba(33,33,33,0.5);
+	height: 100%;
+	width: 100%;
+}
+
+.blog img {
+	z-index: 0;
+	transition: transform 0.2s;
+	transform: none;
+}
+
+.blog .txt {
+	z-index: 2;
+	position: absolute;
+	bottom: -4em;
+	padding: 1.5em;
+	background: none;
+	transition: bottom 0.2s, background 0.15s;
+}
+
+.blog .txt h1 {
+	font-size: 2em;
+	font-weight: bold;
+	transition: 0.2s
+}
+
+.blog .txt a {
+	text-decoration: none;
+	color: white;
+	line-height: 1.5em
+}
+
+.blog .txt p {
+	margin-top: 1em;
+	color: #eee;
+	font-size: 0.85em;
+	line-height: 1.16em;
+}
+
+.blog .txt p span#txtPspan2 {
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s, opacity 0.2s linear;
+}
+
+.blog .extra {
+	z-index: 2;
+	width: 100%;
+	position: absolute;
+	font-size: 0.8em;
+	bottom: 0em;
+	right: 0em;
+	height: 2.45em;
+	transition: background 0.1s linear 0s;
+}
+
+.blog .extra .exL {
+	display: none;
+	position: absolute;
+	top: 0.5em;
+	left: 2em;
+}
+
+.blog .extra .exR {
+	position: absolute;
+	top: 0.6em;
+	right: 0.6em;
+}
+
+.blog .extra a {
+	color: #eee;
+	text-decoration: none;
+}
+
+.blog .extra span {
+	margin: 0 0.2em;
+}
+
+.blog .extra span::after {
+	margin: 0 0.4em;
+}
+
+.blog .extra span.com::after {
+	content: url('../img/com.png');
+}
+
+.blog .extra span.vue::after {
+	content: url('../img/vue.png');
+}1
